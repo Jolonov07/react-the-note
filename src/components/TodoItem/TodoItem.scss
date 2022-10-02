@@ -1,0 +1,116 @@
+.cardItem {
+  margin: 0 30px 20px 0;
+  background: none !important;
+  // box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  .card {
+    width: 220px;
+    height: 226px;
+    border-radius: 10px 10px 10px 0;
+    padding: 20px;
+    color: #555;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border: 1px dashed #eaeaea;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  }
+  .cardContent {
+    .textFleld {
+      width: 100%;
+      margin-top: 25px;
+    } 
+    .box {
+      margin-bottom: 20px !important;
+      .h1_1 {
+        &::before {
+          content: '<h1>';
+          text-transform: lowercase;
+          color: rgba(136, 165, 191, 1);
+          font-family: Brush Script MT, Brush Script Std, cursive;
+          font-size: 24px;
+        }
+      }
+      .h1_2 {
+        &::before {
+          content: '</h1>';
+          text-transform: lowercase;
+          color: rgba(136, 165, 191, 1);
+          font-family: Brush Script MT, Brush Script Std, cursive;
+          font-size: 24px;
+      
+        }
+      }
+      .title {
+        text-transform: uppercase;
+        font-weight: 500;
+        margin-left: 20px;
+        font-size: 20px;
+      }
+    }
+    .p_1 {
+      &::before {
+        content: '<p>';
+        color: rgba(136, 165, 191, 1);
+        font-family: Brush Script MT, Brush Script Std, cursive;
+        margin-top: 10px;
+        font-size: 18px;
+      }
+    }
+    .p_2 {
+      &::before {
+        content: '</p>';
+        color: rgba(136, 165, 191, 1);
+        font-family: Brush Script MT, Brush Script Std, cursive;
+        margin-bottom: 10px;
+        font-size: 18px;
+      }
+    }
+    .description {
+      margin-left: 20px;
+      overflow-x: scroll;
+      flex-wrap: wrap;
+      width: 150px;
+      font-weight: 400;
+    }
+    .description::-webkit-scrollbar {
+      height: 5px;
+    }
+    .description::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgb(204, 219, 232); 
+      border-radius: 10px;
+    }
+    .description::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      -webkit-box-shadow: inset 0 0 6px rgb(108, 173, 230);
+    }
+  }
+  .components {
+    width: 128px;
+    display: flex;
+    border-radius: 0 0 10px 10px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 4px 0px;
+    .buttonCheck {
+      .deleteIcon {
+        font-size: 22px;
+      }
+      .checkIcon {
+        font-size: 18px;
+      }
+    }
+  }
+  .componentEdit {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    border-radius: 10px 10px 0 0;
+    background-color: white;
+    width: 70px;
+    .btnEdit {
+      .icons {
+        font-size: 24px;
+      }
+    }
+  }
+}

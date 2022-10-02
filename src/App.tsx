@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { TodoContext } from './context'
+import { TodoActions } from './context/todoActions'
+import Components from './components'
+import './index.css'
 
 function App() {
+  const {
+    actions,
+    todos
+  } = TodoActions()
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <TodoContext.Provider 
+      value={{ 
+        ...actions,
+        todos, 
+      }}
+    >
+      <div className='container'>
+        <Components.Sidebar />
+        <Components.TodoList /> 
+      </div>
+    </TodoContext.Provider>
+  )
 }
 
-export default App;
+export default App
